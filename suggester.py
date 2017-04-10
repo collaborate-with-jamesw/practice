@@ -2,8 +2,8 @@ import yaml
 
 def print_suggestion(suggestion_dict):
     print((
-        '{name}, it is a {category} place'
-        'on {street} in {city}'
+        '{name}, it is a {category} place '
+        'on {street} in {city}.'
     ).format(
         name=suggestion_dict['name'],
         category=suggestion_dict['category'],
