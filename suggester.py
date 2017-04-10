@@ -1,10 +1,15 @@
 import yaml
 
 def print_suggestion(suggestion_dict):
-    print(suggestion_dict['name'])
-    print(suggestion_dict['category'])
-    print(suggestion_dict['street'])
-    print(suggestion_dict['city'])
+    print((
+        '{name}, it is a {category} place\n'
+        'on {street} in {city}'
+    ).format(
+        name=suggestion_dict['name'],
+        category=suggestion_dict['category'],
+        street=suggestion_dict['street'],
+        city=suggestion_dict['city']
+    ))
 
 with open('suggestions/jamesw.yaml', 'r') as suggestion_file:
   DEFAULT_SUGGESTION = yaml.load(suggestion_file)
