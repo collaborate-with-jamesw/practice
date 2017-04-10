@@ -1,4 +1,5 @@
 import yaml
+from suggestion_loader import get_random_suggestion
 
 def print_suggestion(suggestion_dict):
     print((
@@ -11,7 +12,6 @@ def print_suggestion(suggestion_dict):
         city=suggestion_dict['city']
     ))
 
-with open('suggestions/jamesw.yaml', 'r') as suggestion_file:
-  DEFAULT_SUGGESTION = yaml.load(suggestion_file)
 print('I suggest this restaurant:')
-print_suggestion(DEFAULT_SUGGESTION)
+suggestion = get_random_suggestion()
+print_suggestion(suggestion)
